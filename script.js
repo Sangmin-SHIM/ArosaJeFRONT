@@ -7,23 +7,6 @@ $(window).scroll(function() {
     }
 });
 
-var plant_section = document.querySelector(".plant"); 
-
-window.addEventListener('scroll',() => {
-
-    const {scrollTop, clientHeight} = document.documentElement;
-
-    const topElementToTopViewport = plant_section.getBoundingClientRect().top;
-    
-    if(scrollTop > topElementToTopViewport){
-        plant_section.classList.add('fix-my-plants')
-    }
-    else{
-        plant_section.classList.remove('fix-my-plants')
-
-    }
-     
-})
 // Hamburger
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');

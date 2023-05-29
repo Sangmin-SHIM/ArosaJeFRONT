@@ -20,7 +20,6 @@ body {
 }
 
 /* Navbar section */
-
 .nav {
     padding-top:20px;
     width: 100%;
@@ -137,6 +136,16 @@ body {
 .plant-img{
     position: relative;
 }
+.plant button,
+button.btn-send{
+    background-color: var(--green);
+    color: var(--white)
+}
+.plant button:hover{
+    background-color: var(--light-green);
+    color: var(--white);
+
+}
 
 .annonce .row .img img {
     width: 600px;
@@ -216,7 +225,7 @@ flex-direction: column;
 border-radius: 8px;
 }
 .carousel .card .img {
-background: #8B53FF;
+background: var(--green);
 height: 148px;
 width: 148px;
 border-radius: 50%;

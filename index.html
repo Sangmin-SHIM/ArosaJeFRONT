@@ -21,7 +21,7 @@
                 <ul class="navlinks">
                     <li><a href="contact.html">Contact</a></li>
                     <li>            
-                        <button class="btn rounded">
+                        <button type="button" class="btn rounded btn-upload" data-bs-toggle="modal" data-bs-target="#uploadModal" data-bs-owner-id="@upload-owner-id">
                             Uploader
                         </button>
                     </li>
@@ -53,31 +53,37 @@
                     <div class="img"><img src="img/img-1.jpg" alt="img" draggable="false"></div>
                     <h2>Blanche Pearson</h2>
                     <span>Sales Manager</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1">Open modal for @test1</button>
                 </li>
                 <li class="card">
                     <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
                     <h2>Joenas Brauers</h2>
                     <span>Web Developer</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2">Open modal for @test2</button>
                 </li>
                 <li class="card">
                     <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
                     <h2>Lariach French</h2>
                     <span>Online Teacher</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3">Open modal for @test3</button>
                 </li>
                 <li class="card">
                     <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
                     <h2>James Khosravi</h2>
                     <span>Freelancer</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4">Open modal for @test4</button>
                 </li>
                 <li class="card">
                     <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
                     <h2>Kristina Zasiadko</h2>
                     <span>Bank Manager</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5">Open modal for @test5</button>
                 </li>
                 <li class="card">
                     <div class="img"><img src="img/img-6.jpg" alt="img" draggable="false"></div>
                     <h2>Donald Horton</h2>
                     <span>App Designer</span>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6">Open modal for @test6</button>
                 </li>
                 </ul>
                 <i id="right" class="bi bi-caret-right"></i>
@@ -85,6 +91,64 @@
         </div>
     </section>
     <!-- /Plant -->
+
+    <!-- Modal for message -->
+    <div class="modal fade" id="sendMessageModal" tabindex="-1" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="sendMessageModalLabel">New message</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-send">Send message</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /Modal for message -->
+
+    <!-- Modal for upload -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="uploadModalLabel">Upload File</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-send">Send message</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /Modal for message -->
 
     <!-- Annonce -->
     <section class="annonce pt-3 ">

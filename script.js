@@ -87,25 +87,39 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
-// const carousel = document.querySelector(".custom-carousel")
-// firstImg = carousel.querySelectorAll("img")[0];
-// arrowIcons = document.querySelectorAll(".wrapper i")
 
+// Modal - Send a message
+const sendMessageModal = document.getElementById('sendMessageModal')
+sendMessageModal.addEventListener('show.bs.modal', event => {
+  // Button that triggered the modal
+  const button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  const recipient = button.getAttribute('data-bs-to-owner')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  const modalTitle = sendMessageModal.querySelector('.modal-title')
+  const modalBodyInput = sendMessageModal.querySelector('.modal-body input')
 
-// let isDragStart = false, isDragging=false, prevPageX, prevScrollLeft, positionDiff;
-// let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+  modalTitle.textContent = `New message to ${recipient}`
+  modalBodyInput.value = recipient
+})
 
-// const showHideIcons = () => {
-//     arrowIcons[0].style.display = carousel.scrollLeft == 0? "none" : "block";
-//     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth? "none" : "block";
+// Modal - Upload
+const uploadModal = document.getElementById('uploadModal')
+uploadModal.addEventListener('show.bs.modal', event => {
+  // Button that triggered the modal
+  const button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  const recipient = button.getAttribute('data-bs-owner-id')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  const modalTitle = uploadModal.querySelector('.modal-title')
+  const modalBodyInput = uploadModal.querySelector('.modal-body input')
 
-// }
-
-// arrowIcons.forEach(icon => {
-//     icon.addEventListener("click", (e) => {
-//         let firstImgWidth= firstImg.clientWidth + 14; //+margin-left
-
-//         carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-//         setTimeout(() => showHideIcons(),60);
-//     });
-// })
+  modalTitle.textContent = `Upload file of ${recipient}`
+  modalBodyInput.value = recipient
+})

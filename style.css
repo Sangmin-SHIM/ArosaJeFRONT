@@ -139,7 +139,9 @@ body {
 .plant button,
 button.btn-send{
     background-color: var(--green);
-    color: var(--white)
+    color: var(--white);
+    font-size:1.5rem;
+
 }
 .plant button:hover{
     background-color: var(--light-green);
@@ -147,10 +149,34 @@ button.btn-send{
 
 }
 
-.annonce .row .img img {
-    width: 600px;
-    height: 600px;
+.annonce .card {
+    width: 40rem;
 } 
+
+.annonce .card img{
+    min-height: 30rem;
+    max-height: 30rem;
+}
+
+.annonce .card-title{
+    font-size:2.5rem;
+}
+
+.annonce .card-text{
+    font-size:1.5rem;
+}
+
+.annonce button{
+    background-color: var(--green);
+    color: var(--white);
+    font-size:1.5rem;
+}
+.annonce button:hover{
+    background-color: var(--light-green);
+    color: var(--white);
+
+}
+
 /* Carousel */
 .wrapper {
 max-width: 1100px;
@@ -317,6 +343,11 @@ footer section {
         width: 400px;
         height: 400px;
     } 
+
+    /* Modal */
+    .modal textarea{
+        height:100vh;
+    }
 }
 
 

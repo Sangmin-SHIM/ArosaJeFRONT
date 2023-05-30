@@ -103,7 +103,6 @@ sendMessageModal.addEventListener('show.bs.modal', event => {
   const modalBodyInput = sendMessageModal.querySelector('.modal-body input')
 
   modalTitle.textContent = `New message to ${recipient}`
-  modalBodyInput.value = recipient
 })
 
 // Modal - Upload
@@ -121,5 +120,4 @@ uploadModal.addEventListener('show.bs.modal', event => {
   const modalBodyInput = uploadModal.querySelector('.modal-body input')
 
   modalTitle.textContent = `Upload file of ${recipient}`
-  modalBodyInput.value = recipient
 })

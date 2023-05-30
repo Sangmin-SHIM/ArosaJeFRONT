@@ -45,48 +45,48 @@
 
     <!-- Plant -->
     <section class="plant pt-3 fixed">
-        <h2 class="title text-center display-2">Mes Plantes</h2>
+        <h2 class="title text-center display-2">Les Plantes</h2>
 
         <div class="custom-container">
             <div class="wrapper">
                 <i id="left" class="bi bi-caret-left"></i>
                 <ul class="carousel">
-                <li class="card">
-                    <div class="img"><img src="img/img-1.jpg" alt="img" draggable="false"></div>
-                    <h2>Blanche Pearson</h2>
-                    <span>Sales Manager</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1">Open modal for @test1</button>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
-                    <h2>Joenas Brauers</h2>
-                    <span>Web Developer</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2">Open modal for @test2</button>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
-                    <h2>Lariach French</h2>
-                    <span>Online Teacher</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3">Open modal for @test3</button>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
-                    <h2>James Khosravi</h2>
-                    <span>Freelancer</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4">Open modal for @test4</button>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
-                    <h2>Kristina Zasiadko</h2>
-                    <span>Bank Manager</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5">Open modal for @test5</button>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="img/img-6.jpg" alt="img" draggable="false"></div>
-                    <h2>Donald Horton</h2>
-                    <span>App Designer</span>
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6">Open modal for @test6</button>
-                </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-1.jpg" alt="img" draggable="false"></div>
+                        <h2>Blanche Pearson</h2>
+                        <span>Sales Manager</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1">Open modal for @test1</button>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
+                        <h2>Joenas Brauers</h2>
+                        <span>Web Developer</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2">Open modal for @test2</button>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
+                        <h2>Lariach French</h2>
+                        <span>Online Teacher</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3">Open modal for @test3</button>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
+                        <h2>James Khosravi</h2>
+                        <span>Freelancer</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4">Open modal for @test4</button>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
+                        <h2>Kristina Zasiadko</h2>
+                        <span>Bank Manager</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5">Open modal for @test5</button>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="img/img-6.jpg" alt="img" draggable="false"></div>
+                        <h2>Donald Horton</h2>
+                        <span>App Designer</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6">Open modal for @test6</button>
+                    </li>
                 </ul>
                 <i id="right" class="bi bi-caret-right"></i>
             </div>
@@ -96,7 +96,7 @@
 
     <!-- Modal for message -->
     <div class="modal fade" id="sendMessageModal" tabindex="-1" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="sendMessageModalLabel">New message</h1>
@@ -105,12 +105,8 @@
             <div class="modal-body">
               <form>
                 <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="recipient-name">
-                </div>
-                <div class="mb-3">
                   <label for="message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
+                  <textarea class="form-control " id="message-text"></textarea>
                 </div>
               </form>
             </div>
@@ -125,7 +121,7 @@
 
     <!-- Modal for upload -->
     <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="uploadModalLabel">Upload File</h1>
@@ -133,10 +129,6 @@
             </div>
             <div class="modal-body">
               <form>
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="recipient-name">
-                </div>
                 <div class="mb-3">
                   <label for="message-text" class="col-form-label">Message:</label>
                   <textarea class="form-control" id="message-text"></textarea>
@@ -156,30 +148,96 @@
     <section class="annonce pt-3 ">
         <h2 class="title text-center display-2">Les Annonces</h2>
 
-        <div class="row text-center gx-5 gy-5">
+        <div class="row text-center gx-5 gy-5 mx-3">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-1.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto">
+                    <img src="img/img-4.jpg" alt="img">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >                    
+                    <img src="img/img-3.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-8.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-9.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-5.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-7.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
+                <div class="card m-auto" >
+                    <img src="img/img-2.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="card m-auto" >
+                    <img src="img/img-5.jpg" alt="img" draggable="false">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button type="button" class="btn">Button</button>
+                    </div>
+                  </div>
             </div>
         </div>
     </section>
@@ -199,69 +257,23 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Company name
-                </h6>
-                <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
-                </p>
+                <h3 class="text-uppercase fw-bold mb-4">
+                A'ROSA-JE
+                </h3>
+
             </div>
             <!-- Grid column -->
     
             <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div class="col-md-9 col-lg-8 col-xl-9 mx-auto mb-md-0 mb-4 text-center">
                 <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                Products
-                </h6>
+                <h5 class="text-uppercase fw-bold mb-4">Profile</h5>
                 <p>
-                <a href="#!" class="text-reset">Angular</a>
+                    <a href="#!" class="text-reset">Mon compte</a>
                 </p>
                 <p>
-                <a href="#!" class="text-reset">React</a>
+                    <a href="#!" class="text-reset">Changer mon mot de passe</a>
                 </p>
-                <p>
-                <a href="#!" class="text-reset">Vue</a>
-                </p>
-                <p>
-                <a href="#!" class="text-reset">Laravel</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                Useful links
-                </h6>
-                <p>
-                <a href="#!" class="text-reset">Pricing</a>
-                </p>
-                <p>
-                <a href="#!" class="text-reset">Settings</a>
-                </p>
-                <p>
-                <a href="#!" class="text-reset">Orders</a>
-                </p>
-                <p>
-                <a href="#!" class="text-reset">Help</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                <p>
-                <i class="fas fa-envelope me-3"></i>
-                info@example.com
-                </p>
-                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
             </div>
             <!-- Grid column -->
             </div>

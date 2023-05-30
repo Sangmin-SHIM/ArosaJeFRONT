@@ -45,66 +45,109 @@
 
     <!-- Plant -->
     <section class="plant pt-3 fixed">
-        <h2 class="title text-center display-2 mb-5">Les Plantes (Publiés + Non Publiés)</h2>
+        <h2 class="title text-center display-2 mb-5">Mes Plantes (Publiés + Non Publiés)</h2>
 
         <div class="custom-container mb-5">
             <div class="wrapper">
-                <i id="left" class="bi bi-caret-left"></i>
+                <i id="left" class="arrow bi bi-caret-left"></i>
                 <ul class="carousel">
-                    <li class="card">
+                    <li class="card published">
+                        <i class="bi bi-bookmark-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-1.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>Blanche Pearson</h2>
-                        <span>Sales Manager</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1_plant.owner.email">Open modal for @test1</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforUnpublishModal" data-bs-published="yes">Unpublish</button>
                     </li>
                     <li class="card">
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-2.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>Joenas Brauers</h2>
-                        <span>Web Developer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2_plant.owner.email">Open modal for @test2</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforPublishModal" data-bs-published="no">Publish</button>
                     </li>
-                    <li class="card">
+                    <li class="card published">
+                        <i class="bi bi-bookmark-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-3.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>Lariach French</h2>
-                        <span>Online Teacher</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3_plant.owner.email">Open modal for @test3</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforUnpublishModal" data-bs-published="yes">Unpublish</button>
                     </li>
-                    <li class="card">
+                    <li class="card published">
+                        <i class="bi bi-bookmark-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-4.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>James Khosravi</h2>
-                        <span>Freelancer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4_plant.owner.email">Open modal for @test4</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforUnpublishModal" data-bs-published="yes">Unpublish</button>
                     </li>
                     <li class="card">
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-5.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>Kristina Zasiadko</h2>
-                        <span>Bank Manager</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5_plant.owner.email">Open modal for @test5</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforPublishModal" data-bs-published="no">Publish</button>
                     </li>
                     <li class="card">
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-6.jpg" alt="img" draggable="false">
                         </div>
-                        <h2>Donald Horton</h2>
-                        <span>App Designer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6_plant.owner.email">Open modal for @test6</button>
+                        <h2>my_plant_name</h2>
+                        <span>my_plant_family_name</span>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforPublishModal" data-bs-published="no">Publish</button>
                     </li>
                 </ul>
-                <i id="right" class="bi bi-caret-right"></i>
+                <i id="right" class="arrow bi bi-caret-right"></i>
             </div>
         </div>
     </section>
     <!-- /Plant -->
+
+    <!-- Modal for my plants (Unpublish -> Publish) -->
+    <div class="modal fade" id="clickforPublishModal" tabindex="-1" aria-labelledby="clickPublishModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="clickPublishModalLabel">Unpublished -> Published</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure ? (Unpublish -> Publish)
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-save">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /Modal for my plants (Unpublish -> Publish) -->
+
+    <!-- Modal for my plants (Publish -> Unublish) -->
+    <div class="modal fade" id="clickforUnpublishModal" tabindex="-1" aria-labelledby="clickforUnpublishModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="clickforUnpublishModalModalLabel">Published -> Unublished</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure ? (Publish -> Unpublish)
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-save">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal for my plants (Publish -> Unpublish) -->
 
     <!-- Modal for message -->
     <div class="modal fade" id="sendMessageModal" tabindex="-1" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
@@ -154,6 +197,21 @@
                     <textarea class="form-control" id="description-text"></textarea>
                   </div>
                 <div class="mb-3">
+                    <label for="published-text" class="col-form-label">Published ?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="publishable" id="is_published" checked>
+                        <label class="form-check-label" for="is_published">
+                          Publish 
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="publishable" id="is_unpublished">
+                        <label class="form-check-label" for="is_unpublished">
+                          Unpublish
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
                     <label for="photo-text" class="col-form-label">Upload Photo:</label>
                     <br>
                     <input type="file" id="inp" name="myImage" accept="image/png, image/gif, image/jpeg" />
@@ -179,128 +237,107 @@
 
         <div class="row text-center gx-5 gy-5 mx-3">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-1.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test1</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto">
+                <div class="card m-auto published">
                     <img src="img/img-4.jpg" alt="img">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test2</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >                    
+                <div class="card m-auto published" >                    
                     <img src="img/img-3.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test3</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-8.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test4</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-9.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test5</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-5.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test6</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-7.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test7_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test7</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-2.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test8_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test8</button>
                     </div>
                   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                <div class="card m-auto" >
+                <div class="card m-auto published" >
                     <img src="img/img-5.jpg" alt="img" draggable="false">
                     <div class="card-body">
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickedPublishedModal" data-bs-plant="@plant1-id">Intereseted</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test9_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test9</button>
                     </div>
                   </div>
             </div>
         </div>
     </section>
     <!-- /Annonce -->
-
-    <!-- Modal for annonce -->
-    <div class="modal fade" id="clickedPublishedModal" tabindex="-1" aria-labelledby="clickedPublishedModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="clickedPublishedModalLabel">Save this plant</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Are you sure ?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-save">Save changes</button>
-            </div>
-          </div>
-        </div>
-    </div>
-    <!-- /Modal for annonce -->
-
 
     <!-- Footer -->
     <footer class="text-center text-lg-start mt-5 rounded-top">

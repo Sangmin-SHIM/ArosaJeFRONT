@@ -222,7 +222,7 @@ button.btn-save:hover{
 
 /* Carousel */
 .wrapper {
-max-width: 1100px;
+max-width: 1570px;
 width: 100%;
 position: relative;
 transform: translateX(-50%);
@@ -336,7 +336,7 @@ footer section {
     } 
     /* Card */
     .annonce .card {
-        width: 30rem;
+        width: 32rem;
     } 
 }
 @media screen and (max-width:767px) {
@@ -399,6 +399,7 @@ footer section {
     /* Card */
     .annonce .card {
         width: 30rem;
+        
     } 
 }
 
@@ -417,7 +418,7 @@ footer section {
 }
 
 .navTrigger i {
-    background-color: var(--black);
+    background-color: var(--green);
     border-radius: 2px;
     content: '';
     display: block;
@@ -598,6 +599,10 @@ footer section {
     padding: 0;
     background-color: var(--white);
     z-index: 999;
+}
+.nav.affix{
+    box-shadow: 3px 1px 1px var(--green);
+
 }
 
 .fix-my-plants{

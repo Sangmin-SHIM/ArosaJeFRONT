@@ -186,6 +186,18 @@ button.btn-save:hover{
 
 }
 
+/* Popover */
+/* Popover Header */
+.popover-header {
+    font-size: 20px !important;
+    text-align:center;
+}
+/* Popover Body */
+.popover-body {
+    font-size: 15px !important;
+    text-align:center;
+}
+
 /* Carousel */
 .wrapper {
 max-width: 1100px;

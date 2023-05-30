@@ -1,4 +1,6 @@
+// --------------------------------------------------------------
 // Position Fix
+// --------------------------------------------------------------
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
         $('.nav').addClass('affix');
@@ -9,14 +11,18 @@ $(window).scroll(function() {
     }
 });
 
+// --------------------------------------------------------------
 // Hamburger
+// --------------------------------------------------------------
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
 });
 
+// --------------------------------------------------------------
 // Carousel
+// --------------------------------------------------------------
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
@@ -89,7 +95,9 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
+// --------------------------------------------------------------
 // Modal - Send a message
+// --------------------------------------------------------------
 const sendMessageModal = document.getElementById('sendMessageModal')
 sendMessageModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
@@ -106,7 +114,9 @@ sendMessageModal.addEventListener('show.bs.modal', event => {
   modalTitle.textContent = `New message to ${recipient}`
 })
 
+// --------------------------------------------------------------
 // Modal - Upload
+// --------------------------------------------------------------
 const uploadModal = document.getElementById('uploadModal')
 uploadModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
@@ -122,3 +132,27 @@ uploadModal.addEventListener('show.bs.modal', event => {
 
   modalTitle.textContent = `Uploader les plantes (${owner})`
 })
+
+// --------------------------------------------------------------
+// Tooltip
+// --------------------------------------------------------------
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+// --------------------------------------------------------------
+// Display uploading Image
+// --------------------------------------------------------------
+function readFile() {
+    if (!this.files || !this.files[0]) return;
+      
+    const FR = new FileReader();
+      
+    FR.addEventListener("load", function(evt) {
+      document.querySelector("#img").src         = evt.target.result;
+    }); 
+      
+    FR.readAsDataURL(this.files[0]);
+    
+  }
+  
+  document.querySelector("#inp").addEventListener("change", readFile);

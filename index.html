@@ -52,37 +52,49 @@
                 <i id="left" class="bi bi-caret-left"></i>
                 <ul class="carousel">
                     <li class="card">
-                        <div class="img"><img src="img/img-1.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-1.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>Blanche Pearson</h2>
                         <span>Sales Manager</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1_plant.owner.email">Open modal for @test1</button>
                     </li>
                     <li class="card">
-                        <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-2.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>Joenas Brauers</h2>
                         <span>Web Developer</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2_plant.owner.email">Open modal for @test2</button>
                     </li>
                     <li class="card">
-                        <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-3.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>Lariach French</h2>
                         <span>Online Teacher</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3_plant.owner.email">Open modal for @test3</button>
                     </li>
                     <li class="card">
-                        <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-4.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>James Khosravi</h2>
                         <span>Freelancer</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4_plant.owner.email">Open modal for @test4</button>
                     </li>
                     <li class="card">
-                        <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-5.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>Kristina Zasiadko</h2>
                         <span>Bank Manager</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5_plant.owner.email">Open modal for @test5</button>
                     </li>
                     <li class="card">
-                        <div class="img"><img src="img/img-6.jpg" alt="img" draggable="false"></div>
+                        <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
+                            <img src="img/img-6.jpg" alt="img" draggable="false">
+                        </div>
                         <h2>Donald Horton</h2>
                         <span>App Designer</span>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6_plant.owner.email">Open modal for @test6</button>
@@ -144,7 +156,9 @@
                 <div class="mb-3">
                     <label for="photo-text" class="col-form-label">Upload Photo:</label>
                     <br>
-                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
+                    <input type="file" id="inp" name="myImage" accept="image/png, image/gif, image/jpeg" />
+                    <br>
+                    <img class="mt-3" id="img" height="150">
                 </div>
               </form>
             </div>

@@ -109,7 +109,6 @@ sendMessageModal.addEventListener('show.bs.modal', event => {
   //
   // Update the modal's content.
   const modalTitle = sendMessageModal.querySelector('.modal-title')
-  const modalBodyInput = sendMessageModal.querySelector('.modal-body input')
 
   modalTitle.textContent = `New message to ${recipient}`
 })
@@ -128,7 +127,6 @@ uploadModal.addEventListener('show.bs.modal', event => {
   //
   // Update the modal's content.
   const modalTitle = uploadModal.querySelector('.modal-title')
-  const modalBodyInput = uploadModal.querySelector('.modal-body input')
 
   modalTitle.textContent = `Uploader les plantes (${owner})`
 })

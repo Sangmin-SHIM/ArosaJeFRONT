@@ -112,6 +112,7 @@ label.col-form-label{
     background-position:center;
 	background-size:cover;
     background-repeat: no-repeat;
+    border-radius: 0px 0px 30px 30px !important;
 }
 
 .navTrigger {
@@ -149,7 +150,8 @@ button.btn-send{
     font-size:1.5rem;
 
 }
-.plant button:hover{
+.plant button:hover,
+button.btn-send:hover{
     background-color: var(--light-green);
     color: var(--white);
 
@@ -217,6 +219,9 @@ left: -5px;
 }
 .wrapper i:last-child{
 right: -5px;
+}
+.wrapper i:hover{
+background: var(--light-green);
 }
 .wrapper .carousel{
 display: grid;

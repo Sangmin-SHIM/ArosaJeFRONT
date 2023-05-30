@@ -112,7 +112,7 @@ uploadModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
   const button = event.relatedTarget
   // Extract info from data-bs-* attributes
-  const recipient = button.getAttribute('data-bs-owner-id')
+  const owner = button.getAttribute('data-bs-owner-id')
   // If necessary, you could initiate an AJAX request here
   // and then do the updating in a callback.
   //
@@ -120,5 +120,5 @@ uploadModal.addEventListener('show.bs.modal', event => {
   const modalTitle = uploadModal.querySelector('.modal-title')
   const modalBodyInput = uploadModal.querySelector('.modal-body input')
 
-  modalTitle.textContent = `Upload file of ${recipient}`
+  modalTitle.textContent = `Uploader les plantes (${owner})`
 })

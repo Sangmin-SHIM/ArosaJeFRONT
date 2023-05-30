@@ -55,37 +55,37 @@
                         <div class="img"><img src="img/img-1.jpg" alt="img" draggable="false"></div>
                         <h2>Blanche Pearson</h2>
                         <span>Sales Manager</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1">Open modal for @test1</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1_plant.owner.email">Open modal for @test1</button>
                     </li>
                     <li class="card">
                         <div class="img"><img src="img/img-2.jpg" alt="img" draggable="false"></div>
                         <h2>Joenas Brauers</h2>
                         <span>Web Developer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2">Open modal for @test2</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2_plant.owner.email">Open modal for @test2</button>
                     </li>
                     <li class="card">
                         <div class="img"><img src="img/img-3.jpg" alt="img" draggable="false"></div>
                         <h2>Lariach French</h2>
                         <span>Online Teacher</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3">Open modal for @test3</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3_plant.owner.email">Open modal for @test3</button>
                     </li>
                     <li class="card">
                         <div class="img"><img src="img/img-4.jpg" alt="img" draggable="false"></div>
                         <h2>James Khosravi</h2>
                         <span>Freelancer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4">Open modal for @test4</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4_plant.owner.email">Open modal for @test4</button>
                     </li>
                     <li class="card">
                         <div class="img"><img src="img/img-5.jpg" alt="img" draggable="false"></div>
                         <h2>Kristina Zasiadko</h2>
                         <span>Bank Manager</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5">Open modal for @test5</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5_plant.owner.email">Open modal for @test5</button>
                     </li>
                     <li class="card">
                         <div class="img"><img src="img/img-6.jpg" alt="img" draggable="false"></div>
                         <h2>Donald Horton</h2>
                         <span>App Designer</span>
-                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6">Open modal for @test6</button>
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6_plant.owner.email">Open modal for @test6</button>
                     </li>
                 </ul>
                 <i id="right" class="bi bi-caret-right"></i>
@@ -112,7 +112,11 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-send">Send message</button>
+              <button type="button" class="btn btn-send">
+                <a class="text-decoration-none text-white" href="mailto:data-bs-to-owner?subject=Subject auto&body=Ici, on va mettre textarea message">
+                    Send Mail
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -129,20 +133,31 @@
             </div>
             <div class="modal-body">
               <form>
+                <div class="form-group mb-3">
+                    <label for="plant-name" class="col-form-label">Plant:</label>
+                    <input type="text" class="form-control" id="plant-name">
+                </div>
                 <div class="mb-3">
-                  <label for="message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
+                    <label for="description-text" class="col-form-label">Description:</label>
+                    <textarea class="form-control" id="description-text"></textarea>
+                  </div>
+                <div class="mb-3">
+                    <label for="photo-text" class="col-form-label">Upload Photo:</label>
+                    <br>
+                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
                 </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-send">Send message</button>
+              <button type="button" class="btn btn-send">
+                Uploader
+              </button>
             </div>
           </div>
         </div>
     </div>
-    <!-- /Modal for message -->
+    <!-- /Modal for upload -->
 
     <!-- Annonce -->
     <section class="annonce pt-3 ">

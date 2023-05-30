@@ -28,9 +28,9 @@ label.col-form-label{
 .nav {
     padding-top:20px;
     width: 100%;
-    height: 65px;
+    height: 80px;
     position: fixed;
-    line-height: 65px;
+    line-height: 55px;
     text-align: center;
 }
 
@@ -373,6 +373,7 @@ footer section {
     .nav div.main_list ul li {
         width: 100%;
         text-align: right;
+        padding-right: 0rem;
     }
     .nav div.main_list ul li a {
         text-align: center;
@@ -598,7 +599,7 @@ footer section {
 }
 
 .affix {
-    padding: 0;
+    padding: 0px;
     background-color: var(--white);
     z-index: 999;
 }

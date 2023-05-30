@@ -19,6 +19,12 @@ body {
     font-size: 10px;
 }
 
+.modal-title,
+.btn-secondary,
+label.col-form-label{
+    font-size:1.5rem !important;
+}
+
 /* Navbar section */
 .nav {
     padding-top:20px;
@@ -150,7 +156,7 @@ button.btn-send{
 }
 
 .annonce .card {
-    width: 40rem;
+    width: 35rem;
 } 
 
 .annonce .card img{
@@ -184,6 +190,7 @@ width: 100%;
 position: relative;
 transform: translateX(-50%);
 left: 50%;
+overflow-x: hidden;
 }
 .wrapper i {
 z-index:30;
@@ -290,6 +297,10 @@ footer section {
         width: 400px;
         height: 400px;
     } 
+    /* Card */
+    .annonce .card {
+        width: 30rem;
+    } 
 }
 @media screen and (max-width:767px) {
 
@@ -348,6 +359,10 @@ footer section {
     .modal textarea{
         height:100vh;
     }
+    /* Card */
+    .annonce .card {
+        width: 30rem;
+    } 
 }
 
 

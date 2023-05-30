@@ -2,15 +2,16 @@
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
         $('.nav').addClass('affix');
+        $('.navTrigger').addClass('affix');
     } else {
         $('.nav').removeClass('affix');
+        $('.navTrigger').removeClass('affix');
     }
 });
 
 // Hamburger
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
-    console.log("Clicked menu");
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
 });

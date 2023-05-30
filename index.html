@@ -20,10 +20,10 @@
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
                     <li>
-                        <a href="#">Profile</a>
+                        <a href="#" class="text-uppercase">Profile</a>
                     </li>
                     <li>            
-                        <button type="button" class="btn rounded btn-upload" data-bs-toggle="modal" data-bs-target="#uploadModal" data-bs-owner-id="@upload-owner-id">
+                        <button type="button" class="btn rounded btn-upload text-uppercase" data-bs-toggle="modal" data-bs-target="#uploadModal" data-bs-owner-id="@upload-owner-id">
                             Uploader
                         </button>
                     </li>
@@ -45,9 +45,9 @@
 
     <!-- Plant -->
     <section class="plant pt-3 fixed">
-        <h2 class="title text-center display-2">Les Plantes</h2>
+        <h2 class="title text-center display-2 mb-5">Les Plantes (Publiés + Non Publiés)</h2>
 
-        <div class="custom-container">
+        <div class="custom-container mb-5">
             <div class="wrapper">
                 <i id="left" class="bi bi-caret-left"></i>
                 <ul class="carousel">
@@ -99,7 +99,7 @@
         <div class="modal-dialog modal-fullscreen-md-down">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="sendMessageModalLabel">New message</h1>
+              <h1 class="modal-title" id="sendMessageModalLabel">New message</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -124,7 +124,7 @@
         <div class="modal-dialog modal-fullscreen-md-down">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="uploadModalLabel">Upload File</h1>
+              <h1 class="modal-title" id="uploadModalLabel">Upload File</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -146,15 +146,16 @@
 
     <!-- Annonce -->
     <section class="annonce pt-3 ">
-        <h2 class="title text-center display-2">Les Annonces</h2>
+        <h2 class="title text-center display-2 mb-5">Les Annonces (Publiés) </h2>
 
         <div class="row text-center gx-5 gy-5 mx-3">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                 <div class="card m-auto" >
                     <img src="img/img-1.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -163,8 +164,9 @@
                 <div class="card m-auto">
                     <img src="img/img-4.jpg" alt="img">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -173,8 +175,9 @@
                 <div class="card m-auto" >                    
                     <img src="img/img-3.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -183,8 +186,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-8.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -193,8 +197,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-9.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -203,8 +208,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-5.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -213,8 +219,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-7.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -223,8 +230,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-2.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>
@@ -233,8 +241,9 @@
                 <div class="card m-auto" >
                     <img src="img/img-5.jpg" alt="img" draggable="false">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">planet_name</h5>
+                      <p class="card-description text-muted">family_name</p>
+                      <p class="card-text">planet_description</p>
                       <button type="button" class="btn">Button</button>
                     </div>
                   </div>

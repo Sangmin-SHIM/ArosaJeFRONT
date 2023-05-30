@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 // --------------------------------------------------------------
 // Position Fix
 // --------------------------------------------------------------
@@ -71,37 +71,47 @@ const infiniteScroll = () => {
         carousel.classList.remove("no-transition");
     }
     clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
+    // if(!wrapper.matches(":hover")) autoPlay();
 }
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; 
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
-autoPlay();
+// autoPlay();
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);
+// wrapper.addEventListener("mouseleave", autoPlay);
 
 // --------------------------------------------------------------
 // Modal - Send a message
 // --------------------------------------------------------------
 const sendMessageModal = document.getElementById('sendMessageModal')
 var messageTextArea = document.getElementById('message-text');
+var sendButton = document.getElementsByClassName('btn-send')[0];
+let recipient = "";
+let plantName = "";
+
 sendMessageModal.addEventListener('show.bs.modal', event => {
-  const button = event.relatedTarget
-  const recipient = button.getAttribute('data-bs-to-owner')
+  const button = event.relatedTarget;
+  recipient = button.getAttribute('data-to-owner');
+  plantName = button.getAttribute('data-plant-name');
 
   const modalTitle = sendMessageModal.querySelector('.modal-title')
   modalTitle.textContent = `New message to ${recipient}`
   messageTextArea.value = "";
 })
 
-function sendMail() {
+sendButton.addEventListener('click', function() {
+    sendMail(recipient, plantName);
+})
+
+function sendMail(recipient,plantName) {
     var message = document.getElementById("message-text").value;
-    var mailtoLink = "mailto:data-bs-to-owner?subject=Subject auto&body=" + encodeURIComponent(message);
+    let subject = "Message à propos de votre plante " + plantName 
+    var mailtoLink = "mailto:"+recipient+"?subject="+subject+"&body=" + encodeURIComponent(message);
     window.location.href = mailtoLink;
 }
 

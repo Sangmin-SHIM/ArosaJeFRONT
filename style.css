@@ -8,7 +8,6 @@
     --light-green: #33a968;
 }
 
-
 html,
 body {
     margin: 0;
@@ -154,6 +153,7 @@ button.btn-save{
     color: var(--white);
     font-size:1.5rem;
 }
+
 .plant button:hover,
 button.btn-send:hover,
 button.btn-save:hover{
@@ -196,6 +196,7 @@ button.btn-save:hover{
     left:0;
     font-size: 3rem;
     color: var(--green);
+    padding-left:10px;
 }
 .carousel .card.published .img {
     background: var(--green);
@@ -222,99 +223,100 @@ button.btn-save:hover{
 
 /* Carousel */
 .wrapper {
-max-width: 1570px;
-width: 100%;
-position: relative;
-transform: translateX(-50%);
-left: 50%;
-overflow-x: hidden;
+    max-width: 1570px;
+    width: 100%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    overflow-x: hidden;
 }
 .wrapper i.arrow {
-z-index:30;
-top: 50%;
-height: 50px;
-width: 50px;
-cursor: pointer;
-font-size: 1.25rem;
-position: absolute;
-text-align: center;
-line-height: 50px;
-background: var(--green);
-color: var(--white);
-border-radius: 50%;
-box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-transform: translateY(-50%);
-transition: transform 0.1s linear;
+    z-index:30;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
 }
 .wrapper i.arrow:active{
-transform: translateY(-50%) scale(0.85);
+    transform: translateY(-50%) scale(0.85);
 }
 .wrapper i.arrow:first-child{
-left: -5px;
+    left: 0px;
 }
 .wrapper i.arrow:last-child{
-right: -5px;
+    right: 0px;
 }
 .wrapper i.arrow:hover{
-background: var(--light-green);
+    background: var(--light-green);
 }
 .wrapper .carousel{
-display: grid;
-grid-auto-flow: column;
-grid-auto-columns: calc((100% / 4) - 12px);
-overflow-x: auto;
-scroll-snap-type: x mandatory;
-gap: 8px;
-border-radius: 8px;
-scroll-behavior: smooth;
-scrollbar-width: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 8px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 .carousel::-webkit-scrollbar {
-display: none;
+    display: none;
 }
 .carousel.no-transition {
-scroll-behavior: auto;
+    scroll-behavior: auto;
 }
 .carousel.dragging {
-scroll-snap-type: none;
-scroll-behavior: auto;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
 }
 .carousel.dragging .card {
-cursor: grab;
-user-select: none;
+    cursor: grab;
+    user-select: none;
 }
 .carousel :where(.card, .img) {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .carousel .card {
-scroll-snap-align: start;
-height: 342px;
-list-style: none;
-background: #fff;
-cursor: pointer;
-padding-bottom: 15px;
-flex-direction: column;
-border-radius: 8px;
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: var(--white);
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
 }
 
 .card .img img {
-width: 140px;
-height: 140px;
-border-radius: 50%;
-object-fit: cover;
-border: 4px solid #fff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
 }
-.carousel .card h2 {
-font-weight: 500;
-font-size: 1.56rem;
-margin: 30px 0 5px;
-}
-.carousel .card span {
-font-size: 1.31rem;
-margin-bottom:2rem !important;
 
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card span {
+    font-size: 1.31rem;
+    margin-bottom:2rem !important;
 }
 
 /* Footer */

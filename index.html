@@ -19,10 +19,10 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li>
+                    <li class="text-center">
                         <a href="#" class="text-uppercase">Profile</a>
                     </li>
-                    <li>            
+                    <li class="text-center">            
                         <button type="button" class="btn rounded btn-upload text-uppercase" data-bs-toggle="modal" data-bs-target="#uploadModal" data-bs-owner-id="@upload-owner-id">
                             Uploader
                         </button>
@@ -52,7 +52,7 @@
                 <i id="left" class="arrow bi bi-caret-left"></i>
                 <ul class="carousel">
                     <li class="card published">
-                        <i class="bi bi-bookmark-fill"></i>
+                        <i class="bi bi-megaphone-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-1.jpg" alt="img" draggable="false">
                         </div>
@@ -69,7 +69,7 @@
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforPublishModal" data-bs-published="no">Publish</button>
                     </li>
                     <li class="card published">
-                        <i class="bi bi-bookmark-fill"></i>
+                        <i class="bi bi-megaphone-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-3.jpg" alt="img" draggable="false">
                         </div>
@@ -78,7 +78,7 @@
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#clickforUnpublishModal" data-bs-published="yes">Unpublish</button>
                     </li>
                     <li class="card published">
-                        <i class="bi bi-bookmark-fill"></i>
+                        <i class="bi bi-megaphone-fill"></i>
                         <div data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-title="Description" data-bs-content="Description content" class="img">
                             <img src="img/img-4.jpg" alt="img" draggable="false">
                         </div>
@@ -167,11 +167,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-send">
-                <a onclick="sendMail()" class="text-decoration-none text-white">
-                    Send Mail
-                </a>
-              </button>
+              <button type="button" class="btn btn-send">Send Mail</button>
             </div>
           </div>
         </div>
@@ -192,10 +188,29 @@
                     <label for="plant-name" class="col-form-label">Plant:</label>
                     <input type="text" class="form-control" id="plant-name">
                 </div>
+                <div class="form-group mb-3">
+                    <label for="age" class="col-form-label">Age:</label>
+                    <input type="text" class="form-control" id="age">
+                </div>
                 <div class="mb-3">
                     <label for="description-text" class="col-form-label">Description:</label>
                     <textarea class="form-control" id="description-text"></textarea>
                   </div>
+                <div class="mb-3">
+                    <label for="environment-text" class="col-form-label">Environment ?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="environment" id="is_outside" checked>
+                        <label class="form-check-label" for="is_outside">
+                          Outside
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="environment" id="is_inside">
+                        <label class="form-check-label" for="is_inside">
+                          Inside
+                        </label>
+                    </div>
+                </div>
                 <div class="mb-3">
                     <label for="published-text" class="col-form-label">Published ?</label>
                     <div class="form-check">
@@ -233,7 +248,7 @@
 
     <!-- Annonce -->
     <section class="annonce pt-3 ">
-        <h2 class="title text-center display-2 mb-5">Les Annonces (Publiés) </h2>
+        <h2 class="title text-center display-2 mb-5">Les Annonces (Publiés)</h2>
 
         <div class="row text-center gx-5 gy-5 mx-3">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
@@ -243,7 +258,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test1_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test1</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test1_plant.owner.email" data-plant-name="@test1_plant_name"><i class="bi bi-envelope-fill"></i> @test1</button>
                     </div>
                   </div>
             </div>
@@ -254,7 +269,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test2_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test2</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test2_plant.owner.email" data-plant-name="@test2_plant_name"><i class="bi bi-envelope-fill"></i> @test2</button>
                     </div>
                   </div>
             </div>
@@ -265,7 +280,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test3_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test3</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test3_plant.owner.email" data-plant-name="@test3_plant_name"><i class="bi bi-envelope-fill"></i> @test3</button>
                     </div>
                   </div>
             </div>
@@ -276,7 +291,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test4_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test4</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test4_plant.owner.email" data-plant-name="@test4_plant_name"><i class="bi bi-envelope-fill"></i> @test4</button>
                     </div>
                   </div>
             </div>
@@ -287,7 +302,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test5_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test5</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test5_plant.owner.email" data-plant-name="@test5_plant_name"><i class="bi bi-envelope-fill"></i> @test5</button>
                     </div>
                   </div>
             </div>
@@ -298,7 +313,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test6_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test6</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test6_plant.owner.email" data-plant-name="@test6_plant_name"><i class="bi bi-envelope-fill"></i> @test6</button>
                     </div>
                   </div>
             </div>
@@ -309,7 +324,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test7_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test7</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test7_plant.owner.email" data-plant-name="@test7_plant_name"><i class="bi bi-envelope-fill"></i> @test7</button>
                     </div>
                   </div>
             </div>
@@ -320,7 +335,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test8_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test8</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test8_plant.owner.email" data-plant-name="@test8_plant_name"><i class="bi bi-envelope-fill"></i> @test8</button>
                     </div>
                   </div>
             </div>
@@ -331,7 +346,7 @@
                       <h5 class="card-title">plant_name</h5>
                       <p class="card-description text-muted">family_name</p>
                       <p class="card-text">plant_description</p>
-                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-bs-to-owner="@test9_plant.owner.email"><i class="bi bi-envelope-fill"></i> @test9</button>
+                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#sendMessageModal" data-to-owner="@test9_plant.owner.email" data-plant-name="@test9_plant_name"><i class="bi bi-envelope-fill"></i> @test9</button>
                     </div>
                   </div>
             </div>

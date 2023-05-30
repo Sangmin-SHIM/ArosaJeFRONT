@@ -202,7 +202,8 @@ font-size: 1.25rem;
 position: absolute;
 text-align: center;
 line-height: 50px;
-background: #fff;
+background: var(--green);
+color: var(--white);
 border-radius: 50%;
 box-shadow: 0 3px 6px rgba(0,0,0,0.23);
 transform: translateY(-50%);
@@ -212,10 +213,10 @@ transition: transform 0.1s linear;
 transform: translateY(-50%) scale(0.85);
 }
 .wrapper i:first-child{
-left: -22px;
+left: -5px;
 }
 .wrapper i:last-child{
-right: -22px;
+right: -5px;
 }
 .wrapper .carousel{
 display: grid;

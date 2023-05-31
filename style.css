@@ -189,15 +189,27 @@ button.btn-save:hover{
 
 }
 
+.plant span.birthday{
+    left:10px;
+    bottom:-10px;
+    color: var(--green);
+}
+
 /* Published */
 .plant .card.published i{
-    position: absolute;
-    top:0;
-    left:0;
     font-size: 3rem;
     color: var(--green);
-    padding-left:10px;
+    padding-left:10px;    
 }
+.plant .card.published i.published-icon{
+    top:0;
+    left:0;
+}
+.plant .card.published i.environment-icon{
+    top:0;
+    right:5px;
+}
+
 .carousel .card.published .img {
     background: var(--green);
     height: 148px;

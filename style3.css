@@ -67,7 +67,7 @@ section {
 }
 
 .bg-secondary {
-    background: #15395A !important;
+    background-image: linear-gradient(30deg, #15803d, #33a968)!important;
 }
 @media screen and (min-width: 576px){
     .pe-sm-6, .px-sm-6 {
@@ -102,3 +102,73 @@ section {
 .rounded {
     border-radius: 0.25rem!important;
 }
+
+.button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #15803d, #33a968);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 0.6em 1.5em;
+   }
+
+   .form__group {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #15803d, #33a968);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #15803d;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }

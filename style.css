@@ -193,6 +193,11 @@ button.btn-save:hover{
     left:10px;
     bottom:-10px;
     color: var(--green);
+    font-size:1.5rem !important;
+}
+
+.plant span.birthday i{
+    font-size: 3rem !important;
 }
 
 /* Published */

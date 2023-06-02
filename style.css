@@ -979,6 +979,8 @@ display: none;
     position: relative;
     width: 100%;
     max-width: 180px;
+    bottom: 10px;
+    left: 5px;
   }
   
   .profil .form__field {

@@ -15,6 +15,7 @@
     --white: #ffffff;
     --green: #15803D;
     --light-green: #33a968;
+    --light: #f4f5f7;
 }
 
 html,
@@ -35,12 +36,14 @@ label.col-form-label{
 
 /* Navbar section */
 .nav {
+    background-color: var(--light);
     padding-top:20px;
     width: 100%;
     height: 80px;
     position: fixed;
     line-height: 55px;
     text-align: center;
+    z-index:999;
 }
 
 .nav div.logo {
@@ -372,6 +375,7 @@ footer section {
     /* Nav */
     .navTrigger {
         display: block;
+        z-index: 999;
     }
     .nav div.logo {
         margin-left: 15px;
@@ -392,8 +396,7 @@ footer section {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: var(--white);
-        /*same background color of navbar*/
+        background-color: var(--light);
         background-position: center top;
     }
     .nav div.main_list ul li {
@@ -626,7 +629,7 @@ footer section {
 
 .affix {
     padding: 0px;
-    background-color: var(--white);
+    background-color:var(--light) !important;
     z-index: 999;
 }
 .nav.affix{
@@ -848,10 +851,9 @@ display: none;
 
 ----------------------------------------------------------------- */
 .profil{
-    z-index: -1;
     position: relative;
+    z-index: 10;
 }
-
 .profil .card-style1 {
     box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
 }

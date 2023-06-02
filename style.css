@@ -848,7 +848,6 @@ display: none;
 
 ----------------------------------------------------------------- */
 .profil{
-    margin-top:20px;
 }
 
 .profil .card-style1 {
@@ -870,6 +869,7 @@ display: none;
 }
 
 .profil section {
+    height: 100vh;
     padding: 120px 0;
     overflow: hidden;
     background: #fff;

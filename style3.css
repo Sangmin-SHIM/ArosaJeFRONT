@@ -1,0 +1,183 @@
+.profil{
+    margin-top:20px;
+}
+
+.profil .card-style1 {
+    box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
+}
+.profil .border-0 {
+    border: 0!important;
+}
+.profil .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.profil section {
+    padding: 120px 0;
+    overflow: hidden;
+    background: #fff;
+}
+.profil .mb-2-3, .profil .my-2-3 {
+    margin-bottom: 2.3rem;
+}
+
+.profil .section-title {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.profil .text-primary {
+    color: #ceaa4d !important;
+}
+.profil .text-secondary {
+    color: #15395A !important;
+}
+.profil .font-weight-600 {
+    font-weight: 600;
+}
+.profil .display-26 {
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 992px){
+    .profil .p-lg-7 {
+        padding: 4rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .profil .p-md-6 {
+        padding: 3.5rem;
+    }
+}
+@media screen and (min-width: 576px){
+    .profil .p-sm-2-3 {
+        padding: 2.3rem;
+    }
+}
+.profil .p-1-9 {
+    padding: 1.9rem;
+}
+
+.profil .bg-secondary {
+    background-image: linear-gradient(30deg, #15803d, #33a968)!important;
+}
+@media screen and (min-width: 576px){
+    .profil .pe-sm-6, .profil .px-sm-6 {
+        padding-right: 3.5rem;
+    }
+}
+@media screen and (min-width: 576px){
+    .profil .ps-sm-6, .profil .px-sm-6 {
+        padding-left: 3.5rem;
+    }
+}
+.profil .pe-1-9, .profil .px-1-9 {
+    padding-right: 1.9rem;
+}
+.profil .ps-1-9, .profil .px-1-9 {
+    padding-left: 1.9rem;
+}
+.profil .pb-1-9, .profil .py-1-9 {
+    padding-bottom: 1.9rem;
+}
+.profil .pt-1-9, .profil .py-1-9 {
+    padding-top: 1.9rem;
+}
+.profil .mb-1-9, .profil .my-1-9 {
+    margin-bottom: 1.9rem;
+}
+@media (min-width: 992px){
+    .profil .d-lg-inline-block {
+        display: inline-block!important;
+    }
+}
+.profil .rounded {
+    border-radius: 0.25rem!important;
+}
+
+.profil .button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #15803d, #33a968);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 0.6em 1.5em;
+   }
+
+   .profil .form__group {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .profil .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .profil .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .profil .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .profil .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+  .profil .form__field:focus {
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #15803d, #33a968);
+    border-image-slice: 1;
+  }
+  
+  .profil .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #15803d;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .profil .form__field:required, .profil .form__field:invalid {
+    box-shadow: none;
+  }
+
+  @media screen and (max-width: 576px){
+    .profil .center{
+        text-align: center;
+    }
+  }

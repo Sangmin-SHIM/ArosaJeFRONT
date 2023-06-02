@@ -173,9 +173,8 @@ document.querySelector("#inp").addEventListener("change", async function(e) {
     
     const formData = new FormData();
     formData.append('image', file);
-    formData.append('organ','auto'); // Adjust this value based on your needs
 
-    const response = await fetch('', {
+    const response = await fetch('http://localhost:8000/plant/identify', {
         method: 'POST',
         body: formData
     });

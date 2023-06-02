@@ -1,11 +1,14 @@
-body{margin-top:20px;}
-.card-style1 {
+.profil{
+    margin-top:20px;
+}
+
+.profil .card-style1 {
     box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
 }
-.border-0 {
+.profil .border-0 {
     border: 0!important;
 }
-.card {
+.profil .card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,16 +20,16 @@ body{margin-top:20px;}
     border-radius: 0.25rem;
 }
 
-section {
+.profil section {
     padding: 120px 0;
     overflow: hidden;
     background: #fff;
 }
-.mb-2-3, .my-2-3 {
+.profil .mb-2-3, .profil .my-2-3 {
     margin-bottom: 2.3rem;
 }
 
-.section-title {
+.profil .section-title {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -34,76 +37,76 @@ section {
     position: relative;
     display: inline-block;
 }
-.text-primary {
+.profil .text-primary {
     color: #ceaa4d !important;
 }
-.text-secondary {
+.profil .text-secondary {
     color: #15395A !important;
 }
-.font-weight-600 {
+.profil .font-weight-600 {
     font-weight: 600;
 }
-.display-26 {
+.profil .display-26 {
     font-size: 1.3rem;
 }
 
 @media screen and (min-width: 992px){
-    .p-lg-7 {
+    .profil .p-lg-7 {
         padding: 4rem;
     }
 }
 @media screen and (min-width: 768px){
-    .p-md-6 {
+    .profil .p-md-6 {
         padding: 3.5rem;
     }
 }
 @media screen and (min-width: 576px){
-    .p-sm-2-3 {
+    .profil .p-sm-2-3 {
         padding: 2.3rem;
     }
 }
-.p-1-9 {
+.profil .p-1-9 {
     padding: 1.9rem;
 }
 
-.bg-secondary {
+.profil .bg-secondary {
     background-image: linear-gradient(30deg, #15803d, #33a968)!important;
 }
 @media screen and (min-width: 576px){
-    .pe-sm-6, .px-sm-6 {
+    .profil .pe-sm-6, .profil .px-sm-6 {
         padding-right: 3.5rem;
     }
 }
 @media screen and (min-width: 576px){
-    .ps-sm-6, .px-sm-6 {
+    .profil .ps-sm-6, .profil .px-sm-6 {
         padding-left: 3.5rem;
     }
 }
-.pe-1-9, .px-1-9 {
+.profil .pe-1-9, .profil .px-1-9 {
     padding-right: 1.9rem;
 }
-.ps-1-9, .px-1-9 {
+.profil .ps-1-9, .profil .px-1-9 {
     padding-left: 1.9rem;
 }
-.pb-1-9, .py-1-9 {
+.profil .pb-1-9, .profil .py-1-9 {
     padding-bottom: 1.9rem;
 }
-.pt-1-9, .py-1-9 {
+.profil .pt-1-9, .profil .py-1-9 {
     padding-top: 1.9rem;
 }
-.mb-1-9, .my-1-9 {
+.profil .mb-1-9, .profil .my-1-9 {
     margin-bottom: 1.9rem;
 }
 @media (min-width: 992px){
-    .d-lg-inline-block {
+    .profil .d-lg-inline-block {
         display: inline-block!important;
     }
 }
-.rounded {
+.profil .rounded {
     border-radius: 0.25rem!important;
 }
 
-.button {
+.profil .button {
     border: none;
     color: #fff;
     background-image: linear-gradient(30deg, #15803d, #33a968);
@@ -114,13 +117,13 @@ section {
     padding: 0.6em 1.5em;
    }
 
-   .form__group {
+   .profil .form__group {
     position: relative;
     width: 100%;
     max-width: 180px;
   }
   
-  .form__field {
+  .profil .form__field {
     font-family: inherit;
     width: 100%;
     border: none;
@@ -131,17 +134,17 @@ section {
     transition: border-color 0.2s;
   }
   
-  .form__field::placeholder {
+  .profil .form__field::placeholder {
     color: transparent;
   }
   
-  .form__field:placeholder-shown ~ .form__label {
+  .profil .form__field:placeholder-shown ~ .form__label {
     font-size: 17px;
     cursor: text;
     top: 20px;
   }
   
-  .form__label {
+  .profil .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -151,14 +154,14 @@ section {
     pointer-events: none;
   }
   
-  .form__field:focus {
+  .profil .form__field:focus {
     font-weight: 700;
     border-width: 3px;
     border-image: linear-gradient(to right, #15803d, #33a968);
     border-image-slice: 1;
   }
   
-  .form__field:focus ~ .form__label {
+  .profil .form__field:focus ~ .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -169,6 +172,12 @@ section {
   }
   
   /* reset input */
-  .form__field:required, .form__field:invalid {
+  .profil .form__field:required, .profil .form__field:invalid {
     box-shadow: none;
+  }
+
+  @media screen and (max-width: 576px){
+    .profil .center{
+        text-align: center;
+    }
   }

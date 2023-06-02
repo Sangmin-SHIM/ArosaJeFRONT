@@ -163,3 +163,22 @@ function readFile() {
   }
   
   document.querySelector("#inp").addEventListener("change", readFile);
+
+// --------------------------------------------------------------
+// PlantNet API
+// --------------------------------------------------------------
+document.querySelector("#inp").addEventListener("change", async function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('organ','auto'); // Adjust this value based on your needs
+
+    const response = await fetch('', {
+        method: 'POST',
+        body: formData
+    });
+
+    console.log("response", response);
+});

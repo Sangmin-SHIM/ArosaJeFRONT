@@ -71,13 +71,14 @@ const infiniteScroll = () => {
         carousel.classList.remove("no-transition");
     }
     clearTimeout(timeoutId);
-    // if(!wrapper.matches(":hover")) autoPlay();
+    if(!wrapper.matches(":hover")) autoPlay();
 }
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; 
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
-// autoPlay();
+
+autoPlay();
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
@@ -89,12 +90,14 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 // Modal - Send a message
 // --------------------------------------------------------------
 const sendMessageModal = document.getElementById('sendMessageModal')
+const clickforUnpublishModal = document.getElementById('clickforUnpublishModal')
 var messageTextArea = document.getElementById('message-text');
 var sendButton = document.getElementsByClassName('btn-send')[0];
 let recipient = "";
 let plantName = "";
 
 sendMessageModal.addEventListener('show.bs.modal', event => {
+
   const button = event.relatedTarget;
   recipient = button.getAttribute('data-to-owner');
   plantName = button.getAttribute('data-plant-name');
@@ -102,6 +105,7 @@ sendMessageModal.addEventListener('show.bs.modal', event => {
   const modalTitle = sendMessageModal.querySelector('.modal-title')
   modalTitle.textContent = `New message to ${recipient}`
   messageTextArea.value = "";
+
 })
 
 sendButton.addEventListener('click', function() {
@@ -114,6 +118,19 @@ function sendMail(recipient,plantName) {
     var mailtoLink = "mailto:"+recipient+"?subject="+subject+"&body=" + encodeURIComponent(message);
     window.location.href = mailtoLink;
 }
+
+// --------------------------------------------------------------
+// Modal - Change status
+// --------------------------------------------------------------
+clickforUnpublishModal.addEventListener('show.bs.modal', event => {
+
+    isAutoPlay = false;
+})
+
+clickforUnpublishModal.addEventListener('hidden.bs.modal', event => {
+    isAutoPlay = true;
+    autoPlay();
+})
 
 // --------------------------------------------------------------
 // Modal - Upload
@@ -146,3 +163,21 @@ function readFile() {
   }
   
   document.querySelector("#inp").addEventListener("change", readFile);
+
+// --------------------------------------------------------------
+// PlantNet API
+// --------------------------------------------------------------
+document.querySelector("#inp").addEventListener("change", async function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const formData = new FormData();
+    formData.append('image', file);
+
+    const response = await fetch('http://localhost:8000/plant/identify', {
+        method: 'POST',
+        body: formData
+    });
+
+    console.log("response", response);
+});

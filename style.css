@@ -690,6 +690,7 @@ footer section {
 .login h6 span{
   padding: 0 20px;
   font-weight: 700;
+  font-size: 20px;
 }
 .login .section{
   position: relative;
@@ -738,10 +739,6 @@ display: none;
 .login .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
-
-.signup .checkbox:checked + label:before {
-
-  }
 
 .login .card-3d-wrap {
   position: relative;

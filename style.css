@@ -770,12 +770,7 @@ display: none;
   border-radius: 6px;
   -webkit-transform-style: preserve-3d;
 }
-.login .card-back {
-  transform: rotateY(180deg);
-}
-.login .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
-  transform: rotateY(180deg);
-}
+
 .login .center-wrap{
   position: absolute;
   width: 100%;

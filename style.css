@@ -158,6 +158,17 @@ label.col-form-label{
     position: relative;
 }
 
+.btn.delete{
+    background-color:var(--white) !important;
+    color: var(--green) !important;
+    border: 1px var(--green) solid !important;
+}
+.btn.delete:hover{
+
+    background-color:var(--light-green) !important;
+    color: var(--white) !important;
+}
+
 .plant button,
 button.btn-send,
 button.btn-save{
@@ -198,7 +209,6 @@ button.btn-save:hover{
 .annonce button:hover{
     background-color: var(--light-green);
     color: var(--white);
-
 }
 
 .plant span.birthday{
@@ -211,6 +221,8 @@ button.btn-save:hover{
 .plant span.birthday i{
     font-size: 3rem !important;
 }
+
+
 
 /* Published */
 .plant .card.published i{
@@ -280,10 +292,10 @@ button.btn-save:hover{
     transform: translateY(-50%) scale(0.85);
 }
 .wrapper i.arrow:first-child{
-    left: 0px;
+    left: 10px;
 }
 .wrapper i.arrow:last-child{
-    right: 0px;
+    right: 10px;
 }
 .wrapper i.arrow:hover{
     background: var(--light-green);
@@ -965,7 +977,7 @@ display: none;
     border-radius: 0.25rem!important;
 }
 
-.profil .button {
+.profil .button .btn-upload {
     border: none;
     color: #fff;
     background-image: linear-gradient(30deg, #15803d, #33a968);
@@ -976,7 +988,7 @@ display: none;
     padding: 0.6em 1.5em;
    }
 
-   .profil .form__group {
+.profil .form__group {
     position: relative;
     width: 100%;
     max-width: 180px;

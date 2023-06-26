@@ -113,7 +113,21 @@ label.col-form-label{
     color: var(--green);
 }
 
+.cookiepage h3{
+    font-size: 2.50rem;
+}
 
+.mentionpage h3{
+    font-size: 2.50rem;
+}
+
+.cookiepage h2{
+    font-size: 3rem;
+}
+
+.mentionpage h2{
+    font-size: 3rem;
+}
 /* Home section */
 
 .home {
@@ -355,6 +369,14 @@ footer section {
     display: block ;
     width: 100%;
     border-radius: 30px 30px 0px 0px !important;
+}
+
+.cookiefont{
+    font-size: 14px;
+}
+
+.mentionfont{
+    font-size: 14px;
 }
 /* Media qurey section */
 @media screen and (max-width:1200px) {
@@ -738,10 +760,6 @@ display: none;
 .login .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
-
-.signup .checkbox:checked + label:before {
-
-  }
 
 .login .card-3d-wrap {
   position: relative;

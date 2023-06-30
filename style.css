@@ -1090,9 +1090,13 @@ display: none;
 3) mailbox.html ---------------------------------------------------
 
 ----------------------------------------------------------------- */
+.mailbox {
+    min-height: 100vh;
+}
 .mailbox h2.title{
     margin-top: 10rem;
 }
+
 .mailbox .card img{
     margin: auto;
     margin-top:3rem;

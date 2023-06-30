@@ -30,6 +30,11 @@ a:active{
     color:var(--black) !important;
 }
 
+h2.title{
+    font-weight: 500;
+    color: var(--green);
+}
+
 /* Card */
 .card {
     width: 35rem;
@@ -181,11 +186,6 @@ label.col-form-label{
     position: relative;
 }
 
-.plant h2.title,
-.annonce h2.title{
-    font-weight: 500;
-    color: var(--green)
-}
 .plant .custom-container{
     padding: 0 10px;
 }

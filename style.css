@@ -23,7 +23,6 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
-    min-height: 100vh;
 }
 
 a:active{
@@ -1091,10 +1090,9 @@ display: none;
 3) mailbox.html ---------------------------------------------------
 
 ----------------------------------------------------------------- */
-.mailbox nav{
-    position: relative !important;
+.mailbox h2.title{
+    margin-top: 10rem;
 }
-
 .mailbox .card img{
     margin: auto;
     margin-top:3rem;

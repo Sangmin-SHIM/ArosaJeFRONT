@@ -9,13 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
-    <!-- Jquery needed -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="script.js" defer></script>
 
+    <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
 
     <title>A'ROSA-JE</title>
 </head>
@@ -30,14 +27,17 @@
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
                     <li class="text-center">
-                      <a href="login.html" class="text-uppercase">Login/Logout</a>
+                      <a href="mailbox.html" class="text-uppercase"><i id="envelope-icon" class="fa-solid fa-envelope"></i></a>
                     </li>
                     <li class="text-center">
-                        <a href="profil.html" class="text-uppercase">Profil</a>
+                      <a href="login.html" class="text-uppercase"><i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="profil.html" class="text-uppercase"><i class="fas fa-user"></i></a>
                     </li>
                     <li class="text-center">            
                         <button type="button" class="btn rounded btn-upload text-uppercase" data-bs-toggle="modal" data-bs-target="#uploadModal" data-bs-owner-id="@upload-owner-id">
-                            Uploader
+                          <i class="fas fa-upload"></i>
                         </button>
                     </li>
                 </ul>
@@ -58,7 +58,7 @@
 
     <!-- Plant -->
     <section class="plant pt-3 fixed">
-        <h2 class="title text-center display-2 mb-5">Mes Plantes (Publiés + Non Publiés)</h2>
+        <h2 class="title text-center display-2 mb-5">Mes Plantes</h2>
 
         <div class="custom-container mb-5">
             <div class="wrapper">
@@ -184,7 +184,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form method="POST" action="controller_send_message">
                 <div class="mb-3">
                   <label for="message-text" class="col-form-label">Message:</label>
                   <textarea class="form-control " id="message-text"></textarea>
@@ -193,7 +193,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-send">Send Mail</button>
+              <button type="submit" class="btn btn-send">Envoyer un message</button>
             </div>
           </div>
         </div>
@@ -364,7 +364,7 @@
 
   <!-- Annonce -->
   <section class="annonce pt-3 ">
-      <h2 class="title text-center display-2 mb-5">Les Annonces (Publiés)</h2>
+      <h2 class="title text-center display-2 mb-5">Les Annonces</h2>
 
       <div class="row text-center gx-5 gy-5 mx-3">
           <div class="col-12 col-sm-12 col-md-6 col-lg-4">

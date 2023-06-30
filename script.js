@@ -2,23 +2,24 @@
 // --------------------------------------------------------------
 // Position Fix
 // --------------------------------------------------------------
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-        $('.nav').addClass('affix');
-        $('.navTrigger').addClass('affix');
-    } else {
-        $('.nav').removeClass('affix');
-        $('.navTrigger').removeClass('affix');
-    }
-});
+window.addEventListener('scroll', function() {
+    if (document.documentElement.scrollTop > 50) {
+      document.querySelector('.nav').classList.add('affix');
+      document.querySelector('.navTrigger').classList.add('affix');
 
+    } else {
+      document.querySelector('.nav').classList.remove('affix');
+      document.querySelector('.navTrigger').classList.remove('affix');
+    }
+  });
+  
 // --------------------------------------------------------------
 // Hamburger
 // --------------------------------------------------------------
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
+document.querySelector('.navTrigger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector("#mainListDiv").classList.toggle("show_list");
+    document.querySelector("#mainListDiv").style.display = "block";
 });
 
 // --------------------------------------------------------------
@@ -84,7 +85,6 @@ carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-// wrapper.addEventListener("mouseleave", autoPlay);
 
 // --------------------------------------------------------------
 // Modal - Send a message
@@ -103,21 +103,10 @@ sendMessageModal.addEventListener('show.bs.modal', event => {
   plantName = button.getAttribute('data-plant-name');
 
   const modalTitle = sendMessageModal.querySelector('.modal-title')
-  modalTitle.textContent = `New message to ${recipient}`
+  modalTitle.innerHTML = `New message to  <strong>${recipient}</strong>`
   messageTextArea.value = "";
 
 })
-
-sendButton.addEventListener('click', function() {
-    sendMail(recipient, plantName);
-})
-
-function sendMail(recipient,plantName) {
-    var message = document.getElementById("message-text").value;
-    let subject = "Message à propos de votre plante " + plantName 
-    var mailtoLink = "mailto:"+recipient+"?subject="+subject+"&body=" + encodeURIComponent(message);
-    window.location.href = mailtoLink;
-}
 
 // --------------------------------------------------------------
 // Modal - Change status
@@ -147,7 +136,7 @@ uploadModal.addEventListener('show.bs.modal', event => {
 // --------------------------------------------------------------
 // Tooltip
 // --------------------------------------------------------------
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverTriggerList = document.querySelectorAll('[data-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 // --------------------------------------------------------------
@@ -181,3 +170,18 @@ document.querySelector("#inp").addEventListener("change", async function(e) {
 
     console.log("response", response);
 });
+
+// --------------------------------------------------------------
+// Icon Change on Hover
+// --------------------------------------------------------------
+    var envelopeIcon = document.getElementById('envelope-icon');
+    
+    envelopeIcon.addEventListener('mouseover', function() {
+      envelopeIcon.classList.remove('fa-envelope');
+      envelopeIcon.classList.add('fa-envelope-open');
+    });
+    
+    envelopeIcon.addEventListener('mouseout', function() {
+      envelopeIcon.classList.remove('fa-envelope-open');
+      envelopeIcon.classList.add('fa-envelope');
+    });

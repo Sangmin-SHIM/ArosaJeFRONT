@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
-
 /* --------------------------------------------------------------
 
-1) index.html ---------------------------------------------------
+0) GLOBALS ---------------------------------------------------
 
 ----------------------------------------------------------------- */
-
-
 /* Color */
 :root {
     --black: #000000;
@@ -26,8 +23,32 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
+    min-height: 100vh;
 }
 
+a:active{
+    color:var(--black) !important;
+}
+
+/* Card */
+.card {
+    width: 35rem;
+} 
+
+.card-title{
+    font-size:2.5rem;
+}
+
+.card-text{
+    font-size:1.5rem;
+}
+
+
+/* --------------------------------------------------------------
+
+1) index.html ---------------------------------------------------
+
+----------------------------------------------------------------- */
 .modal-title,
 .btn-secondary,
 label.col-form-label{
@@ -36,12 +57,12 @@ label.col-form-label{
 
 /* Navbar section */
 .nav {
+    position: fixed;
     background-color: var(--light);
     padding-top:20px;
     width: 100%;
     height: 80px;
-    position: fixed;
-    line-height: 55px;
+    line-height: 54.5px;
     text-align: center;
     z-index:999;
 }
@@ -177,8 +198,8 @@ label.col-form-label{
     color: var(--green) !important;
     border: 1px var(--green) solid !important;
 }
-.btn.delete:hover{
 
+.btn.delete:hover{
     background-color:var(--light-green) !important;
     color: var(--white) !important;
 }
@@ -198,21 +219,9 @@ button.btn-save:hover{
     color: var(--white);
 }
 
-.annonce .card {
-    width: 35rem;
-} 
-
 .annonce .card img{
     min-height: 30rem;
     max-height: 30rem;
-}
-
-.annonce .card-title{
-    font-size:2.5rem;
-}
-
-.annonce .card-text{
-    font-size:1.5rem;
 }
 
 .annonce button{
@@ -220,10 +229,12 @@ button.btn-save:hover{
     color: var(--white);
     font-size:1.5rem;
 }
+
 .annonce button:hover{
     background-color: var(--light-green);
     color: var(--white);
 }
+
 
 .plant span.birthday{
     left:10px;
@@ -235,8 +246,6 @@ button.btn-save:hover{
 .plant span.birthday i{
     font-size: 3rem !important;
 }
-
-
 
 /* Published */
 .plant .card.published i{
@@ -378,7 +387,7 @@ button.btn-save:hover{
 footer section {
     background-color: var(--green);
     color:var(--white);
-    display: block ;
+    display: block;
     width: 100%;
     border-radius: 30px 30px 0px 0px !important;
 }
@@ -1076,3 +1085,64 @@ display: none;
         text-align: center;
     }
   }
+
+/* --------------------------------------------------------------
+
+3) mailbox.html ---------------------------------------------------
+
+----------------------------------------------------------------- */
+.mailbox nav{
+    position: relative !important;
+}
+
+.mailbox .card img{
+    margin: auto;
+    margin-top:3rem;
+    background: var(--green);
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+}
+
+.mailbox button{
+    background-color: var(--green);
+    color: var(--white);
+    font-size:1.5rem;
+}
+
+.mailbox button:hover{
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+/* Card */
+.mailbox .card-text{
+    color: gray;
+}
+
+/* Card Read */
+.mailbox .read{
+    border: 2px solid var(--green) !important;
+}
+
+.mailbox .read .card-title{
+    color: var(--green);
+    font-weight: bold;
+}
+
+.mailbox .read .card-text{
+    color: var(--black);
+    font-weight: bold;
+}
+
+.mailbox .card.read .new-message-icon{
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    color: var(--green);
+    padding-left: 10px;
+}
+
+.mailbox .read button{
+    font-weight: bold;
+}

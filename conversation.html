@@ -103,12 +103,12 @@
             <div class="row height d-flex justify-content-center align-items-center">
               <div class="col-md-12">
                 <div class="send-message">
-                  <input type="text" class="form-control" placeholder="Type Here">
-                  <button class="btn">Envoyer</button>
+                  <form action="/send-message" method="POST">
+                    <input type="text" class="form-control" name="message" placeholder="Type Here">
+                    <button class="btn" type="submit">Envoyer</button>
+                  </form>
                 </div>
-                
               </div>
-              
             </div>
         </div>
         <!-- /Conversation -->

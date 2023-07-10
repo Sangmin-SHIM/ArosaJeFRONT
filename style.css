@@ -138,6 +138,14 @@ label.col-form-label{
     color: var(--green);
 }
 
+.nav .new-mail-alarm {
+    top:2.2rem; 
+    right: 2.8rem; 
+    width: 10px; 
+    height: 10px; 
+    background-color: red; 
+    border-radius: 2rem;
+}
 .cookiepage h3{
     font-size: 2.50rem;
 }
@@ -454,6 +462,11 @@ footer section {
     }
     .nav div.media_button {
         display: block;
+    }
+
+    .nav .new-mail-alarm {
+        top:2rem; 
+        right: calc(50% - 1.7rem);
     }
 
     /* Carousel */

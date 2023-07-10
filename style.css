@@ -1151,7 +1151,11 @@ display: none;
     font-weight: bold;
 }
 
+.mailbox .new-message-icon {
+    display: none;
+}
 .mailbox .card.read .new-message-icon{
+    display: block;
     top: 0;
     left: 0;
     font-size: 3rem;
@@ -1236,7 +1240,7 @@ display: none;
 /* Conversation */
 .conversation-container {
     min-height: 79.5vh;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
@@ -1263,7 +1267,8 @@ display: none;
     margin-left: 50%;
     align-items: end;
     flex-direction: column;
-    background-color: var(--light-green);
+    background-color: var(--green);
+    color: var(--light);
 }
 
 .bubble{
@@ -1274,4 +1279,48 @@ display: none;
 .time {
     font-size: 0.8rem;
     color: var(--black);
+}
+
+/* Send Message Bar */
+.send-message-container{
+    width: 80%;
+    margin: auto;
+}
+
+.send-message{
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+}
+
+.send-message input{
+
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.send-message input:focus{
+    box-shadow: none;
+    border: 2px solid var(--green);
+}
+
+.send-message .fa-search{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+}
+
+.send-message button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: var(--green);
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.send-message button:hover{
+    background: var(--light-green);
 }

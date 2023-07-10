@@ -1235,7 +1235,7 @@ display: none;
 
 /* Conversation */
 .conversation-container {
-    min-height: 80vh;
+    min-height: 79.5vh;
     width: 90%;
     margin: auto;
 }

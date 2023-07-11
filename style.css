@@ -1253,6 +1253,8 @@ display: none;
     margin-bottom: 1rem;
     border-radius: 2rem;
     padding: 1.5rem;
+    flex-direction: column;
+
 
 }
 
@@ -1266,7 +1268,6 @@ display: none;
     width: 50%;
     margin-left: 50%;
     align-items: end;
-    flex-direction: column;
     background-color: var(--green);
     color: var(--light);
 }

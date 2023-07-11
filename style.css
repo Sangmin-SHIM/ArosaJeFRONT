@@ -35,15 +35,21 @@ h2.title{
 }
 
 /* Card */
-.card {
+.mailbox .card,
+.conversation .card,
+.annonce .card {
     width: 35rem;
 } 
 
-.card-title{
+.mailbox .card-title,
+.conversation .card-title,
+.annonce .card-title {
     font-size:2.5rem;
 }
 
-.card-text{
+.mailbox .card-text,
+.conversation .card-text,
+.annonce .card-text {
     font-size:1.5rem;
 }
 

@@ -1137,16 +1137,16 @@ display: none;
 }
 
 /* Card Read */
-.mailbox .read{
+.mailbox .unread{
     border: 2px solid var(--green) !important;
 }
 
-.mailbox .read .card-title{
+.mailbox .unread .card-title{
     color: var(--green);
     font-weight: bold;
 }
 
-.mailbox .read .card-text{
+.mailbox .unread .card-text{
     color: var(--black);
     font-weight: bold;
 }
@@ -1154,7 +1154,7 @@ display: none;
 .mailbox .new-message-icon {
     display: none;
 }
-.mailbox .card.read .new-message-icon{
+.mailbox .card.unread .new-message-icon{
     display: block;
     top: 0;
     left: 0;
@@ -1163,7 +1163,7 @@ display: none;
     padding-left: 10px;
 }
 
-.mailbox .read button{
+.mailbox .unread button{
     font-weight: bold;
 }
 
@@ -1277,7 +1277,7 @@ display: none;
 }
 
 .time {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: var(--black);
 }
 

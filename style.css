@@ -413,11 +413,11 @@ footer section {
     font-size: 14px;
 }
 
-.drpg {
+.gpdr {
     color: var(--white);
 }
 
-.drpg:hover {
+.gpdr:hover {
     color: var(--light-green);
     cursor: pointer;
 }

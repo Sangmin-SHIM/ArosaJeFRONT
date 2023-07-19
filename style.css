@@ -412,6 +412,16 @@ footer section {
 .mentionfont{
     font-size: 14px;
 }
+
+.drpg {
+    color: var(--white);
+}
+
+.drpg:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
 /* Media qurey section */
 @media screen and (max-width:1200px) {
     .wrapper .carousel {

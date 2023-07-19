@@ -361,7 +361,48 @@
           </div>
       </div>
   </div>
-  <!-- /6) Modal : Delete -->    
+  <!-- /6) Modal : Delete --> 
+  
+  <!-- 7) Modal : Mentions Légales -->
+  <div class="modal fade" id="clickforDRPGModal" tabindex="-1" aria-labelledby="clickforclickforDRPGModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="clickforDRPGModalLabel">Mentions légales & Cookies</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Content -->
+          <section class="mentionpage">
+            <div style="padding: 4% 8%; padding-bottom: 2%;">
+                <h2 style="color: #15803D; text-align: center; padding-bottom: 4%;">Mentions Légales</h2>
+                <h3 style="color: #15803D;">Informations générales</h3>
+                <p class="mentionfont">Le présent site web est la propriété de [Nom de l'entreprise de gardiennage de plantes], une entreprise enregistrée au [Numéro d'enregistrement de l'entreprise] et dont le siège social est situé au [Adresse du siège social].</p>
+                <br>
+                <p class="mentionfont">Directeur de la publication : [Nom du directeur de l'entreprise]</p>
+                <p class="mentionfont">Adresse e-mail : [Adresse e-mail de contact]</p>
+                <p class="mentionfont">Numéro de téléphone : [Numéro de téléphone de contact]</p>
+                <h3 style="color: #15803D;">Hébergement du site</h3>
+                <p class="mentionfont">Le site web est hébergé par [Nom de l'hébergeur], dont le siège social est situé au [Adresse de l'hébergeur].</p>
+                <p class="mentionfont">Tous les éléments présents sur le site web, y compris mais sans s'y limiter, les textes, les images, les graphiques, les logos, les icônes, les vidéos, les logiciels et les fichiers audio, sont la propriété exclusive de [Nom de l'entreprise de gardiennage de plantes] ou de ses partenaires et sont protégés par les lois nationales et internationales relatives à la propriété intellectuelle. Toute reproduction, distribution, modification, adaptation, ou utilisation non autorisée de ces éléments est strictement interdite sans l'autorisation préalable écrite de [Nom de l'entreprise de gardiennage de plantes].</p>
+                <h3 style="color: #15803D;">Protection des données personnelles</h3>
+                <p class="mentionfont">[Si vous collectez des données personnelles sur votre site web, vous devez inclure une section sur la protection des données personnelles conformément aux lois applicables, comme le Règlement général sur la protection des données (RGPD) en Europe.]</p>
+                <h3 style="color: #15803D;">Liens externes</h3>
+                <p class="mentionfont">Le site web peut contenir des liens vers des sites web tiers. Ces liens sont fournis uniquement à titre informatif et [Nom de l'entreprise de gardiennage de plantes] n'assume aucune responsabilité quant au contenu de ces sites web tiers. La présence de liens vers des sites web tiers ne constitue en aucun cas une approbation ou une recommandation de ces sites web.</p>
+                <h3 style="color: #15803D;">Responsabilité</h3>
+                <p class="mentionfont">[Nom de l'entreprise de gardiennage de plantes] s'efforce de fournir des informations précises et à jour sur son site web, mais ne peut garantir leur exhaustivité, leur exactitude ou leur adéquation à un usage particulier. En conséquence, [Nom de l'entreprise de gardiennage de plantes] décline toute responsabilité en cas d'erreur, d'omission, ou de dommage résultant de l'utilisation de ces informations.</p>
+                <h3 style="color: #15803D;">Droit applicable et juridiction compétente</h3>
+                <p class="mentionfont">Les présentes mentions légales sont régies par le droit applicable dans le pays où est situé le siège social de [Nom de l'entreprise de gardiennage de plantes]. Tout litige relatif à l'utilisation du site web sera soumis à la compétence exclusive des tribunaux de cette juridiction.</p>
+            </div>
+        </section>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- /6) Modal : Mentions Légales --> 
 
   <!-- Annonce -->
   <section class="annonce pt-3 ">
@@ -494,10 +535,7 @@
                 <!-- Links -->
                 <h5 class="text-uppercase fw-bold mb-4">Profil</h5>
                 <p>
-                    <a href="#!" class="text-reset">Mon compte</a>
-                </p>
-                <p>
-                    <a href="#!" class="text-reset">Changer mon mot de passe</a>
+                    <a class="drpg" data-bs-toggle="modal" data-bs-target="#clickforDRPGModal">Mentions légales</a>
                 </p>
             </div>
             <!-- Grid column -->

@@ -413,14 +413,18 @@ footer section {
     font-size: 14px;
 }
 
-.gpdr {
-    color: var(--white);
-}
 
 .gpdr:hover {
     color: var(--light-green);
     cursor: pointer;
 }
+
+.btn-gdpr{
+    background-color: var(--green);
+    color: var(--white);
+    font-size:2rem;
+}
+
 
 /* Media qurey section */
 @media screen and (max-width:1200px) {
